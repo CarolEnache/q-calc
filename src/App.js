@@ -1,6 +1,8 @@
+import styled from 'styled-components';
+
 import Navigation from './components/nav-bar';
 import TheQuickBookCalculator from './components/calculator';
-import styled from 'styled-components';
+import Faq from './components/frequently-asked';
 
 const Section = styled.section`
   width: 747px;
@@ -14,6 +16,9 @@ function App() {
       <Navigation />
       <Section>
         <TheQuickBookCalculator />
+      </Section>
+      <Section>
+        <Faq />
       </Section>
     </>
   );

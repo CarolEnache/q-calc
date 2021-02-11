@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import SocialSection from '../social-section';
+
 import {
   CalculatorWrapper,
   Title,
@@ -94,6 +96,7 @@ const TheQuickBookCalculator = () => {
             <TotalAmount>{`£${total}`}</TotalAmount>
           </TotalSection>
         </Wrapper>
+        <SocialSection />
       </CalculatorWrapper>
     </>
   );

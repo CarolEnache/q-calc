@@ -6,6 +6,7 @@ export const CalculatorWrapper = styled.div`
 
 export const Title = styled.h1`
   padding: 2rem;
+  font-weight: 900;
 `;
 
 export const FormGroup = styled.div`

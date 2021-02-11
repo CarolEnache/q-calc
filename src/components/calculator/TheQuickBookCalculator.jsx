@@ -14,7 +14,8 @@ import {
   InputWrapper,
 } from './styled';
 
-const TheQuickBookCalculator = () => {
+const TheQuickBookCalculator = (props) => {
+  const { socialData } = props;
   const [total, setTotal] = useState(0);
   const [insertedValues, setInsertedValues] = useState({
     income: 0,
@@ -96,7 +97,7 @@ const TheQuickBookCalculator = () => {
             <TotalAmount>{`£${total}`}</TotalAmount>
           </TotalSection>
         </Wrapper>
-        <SocialSection />
+        <SocialSection socialData={socialData} />
       </CalculatorWrapper>
     </>
   );

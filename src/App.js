@@ -4,6 +4,8 @@ import Navigation from './components/nav-bar';
 import TheQuickBookCalculator from './components/calculator';
 import Faq from './components/frequently-asked';
 
+import { FAQ, socialData } from './data'
+
 const Section = styled.section`
   width: 747px;
   margin: 0 auto;
@@ -15,10 +17,10 @@ function App() {
     <>
       <Navigation />
       <Section>
-        <TheQuickBookCalculator />
+        <TheQuickBookCalculator socialData={socialData}/>
       </Section>
       <Section>
-        <Faq />
+        <Faq faq={FAQ} />
       </Section>
     </>
   );

@@ -1,17 +1,7 @@
 import Icon from '../icons';
 import { IconWrapper, IconsSection, SocialSectionWrapper } from './styled'
 
-const socialData = [
-  'facebook',
-  'linkedIn',
-  'pinterest',
-  'instagram',
-  'youtube',
-  'mail',
-  'link',
-];
-
-const SocialSection = () => (
+const SocialSection = ({socialData}) => (
   <SocialSectionWrapper>
     <p>Share my results</p>
     <IconsSection>

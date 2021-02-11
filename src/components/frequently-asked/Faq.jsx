@@ -1,30 +1,7 @@
 import { useState } from 'react';
 import { Section, Arrow, Dropdown, Answer, Title } from './styled'
 
-const FAQ = [
-  {
-    question: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit?',
-    answer:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupt fuga at vitae ab mollitia, iste similique voluptatum ipsam officiis, doloremque accusamus dolor, nisi repellat aspernatur! Sequi nihilipsa dolores mollitia',
-  },
-  {
-    question: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit?',
-    answer:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupt fuga at vitae ab mollitia, iste similique voluptatum ipsam officiis, doloremque accusamus dolor, nisi repellat aspernatur! Sequi nihilipsa dolores mollitia',
-  },
-  {
-    question: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit?',
-    answer:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupt fuga at vitae ab mollitia, iste similique voluptatum ipsam officiis, doloremque accusamus dolor, nisi repellat aspernatur! Sequi nihilipsa dolores mollitia',
-  },
-  {
-    question: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit?',
-    answer:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupt fuga at vitae ab mollitia, iste similique voluptatum ipsam officiis, doloremque accusamus dolor, nisi repellat aspernatur! Sequi nihilipsa dolores mollitia',
-  },
-];
-
-const Faq = () => {
+const Faq = ({faq}) => {
   const [toggle, setToggle] = useState(false);
   const [indexToToggle, setIndexToToggle] = useState(null);
 
@@ -37,7 +14,7 @@ const Faq = () => {
     <>
       <Section>
         <Title>Frequently asked questions</Title>
-        {FAQ.map(({ question, answer }, index) => (
+        {faq.map(({ question, answer }, index) => (
           <div key={index}>
             <Dropdown
               onClick={() => handleClick(index)}
